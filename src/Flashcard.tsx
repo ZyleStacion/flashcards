@@ -1,12 +1,6 @@
 import { Questions } from "./Questions";
-import { useState } from "react";
 
-export default function Flashcard({ step }: { step: number }) {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  function flipCard() {
-    setIsFlipped(!isFlipped);
-  }
+export default function Flashcard({ step, isFlipped, flipCard }: { step: number, isFlipped: boolean, flipCard: () => void }) {
 
   const questionToMap = Questions.filter((question) => question.id === step);
   return questionToMap.map((question) => (
