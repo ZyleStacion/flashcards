@@ -2,6 +2,7 @@ import { useState } from 'react'
 import ProgressBar from './ProgressBar'
 import Flashcard from './Flashcard'
 import { Questions } from './Questions'
+import NavigationButtons from './Buttons'
 
 function App() {
     const [step, setStep] = useState<number>(0);
@@ -12,6 +13,7 @@ function App() {
             <h1>Flashcards</h1>
             <ProgressBar step={step + 1} total={total} />
             <Flashcard step={step}/>
+            <NavigationButtons />
         </>
     );
 }
