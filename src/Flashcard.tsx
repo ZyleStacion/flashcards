@@ -13,7 +13,7 @@ export default function Flashcard({ step }: { step: number }) {
     <div
       id="flashcardContent"
       key={question.id}
-      className="flex justify-center items-center h-100 border-2 border-solid border-black bg-neutral-50 dark:border-gray-700 dark:bg-gray-800 rounded-md mt-6"
+      className="flex justify-center items-center h-100 border-2 border-solid border-black bg-neutral-50 dark:border-gray-700 dark:bg-gray-800 rounded-md mt-6 px-12"
       onClick={flipCard}
     >
       <p id="backText" className="text-3xl text-center">
